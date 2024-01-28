@@ -108,4 +108,7 @@
     margin-left: 0;
     margin-bottom: 20px; /* Add margin at the bottom of each service item */
   }
+  .service-item + .service-item {
+    margin-left: 0px; 
+}
 }

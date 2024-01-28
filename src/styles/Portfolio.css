@@ -307,8 +307,13 @@
     padding: 8px 12px; /* Adjust padding for navigation buttons on smaller screens */
   }
   /* Your existing styles below */
-.vertical-line {
-  display: none; /* Hide the vertical line in mobile view */
+  .modal-info {
+    text-align: center;
+    border-top: 1px solid #080808;
+    border-left: 1px solid #080808;
+    border-right: 1px solid #080808;
+    border-bottom: 1px solid #080808;
+    padding-bottom: 0px;
 }
 }
 
