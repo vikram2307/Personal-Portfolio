@@ -1,0 +1,263 @@
+/* Header.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-right: 467px;
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 10px; /* Add padding to create space between text and underline */
+  margin-bottom: 10px; /* Or you can use margin */
+}
+
+.nav a:hover {
+  color: #af4c4c;
+}
+
+.nav .nav-selected {
+  color: #fd4766;
+  position: relative;
+}
+
+.nav .nav-selected::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fd4766;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.social-icon {
+  
+  color: darkblue;
+  margin-right: 17px;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover svg {
+  fill: #4caf50;
+}
+
+.hire-me button {
+  background-color: transparent;
+  color: #f5f7f9;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: 2px solid #f6f9fb;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  border-radius: 20px;
+ 
+}
+
+.hire-me button:hover {
+  background-color: #fd4766;
+}
+
+/* Styles for scrolled state */
+.header-scrolled {
+  background-color: #091020;
+}
+
+.logo-scrolled img {
+  width: 40px;
+}
+
+.nav-scrolled a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-scrolled a:hover {
+  color: #af4c4c;
+}
+
+.nav-scrolled .nav-selected {
+  color: #fd4766;
+  position: relative;
+}
+
+.nav-scrolled .nav-selected::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fd4766;
+}
+
+.social-icons-scrolled svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+
+.social-icons-scrolled svg:hover {
+  fill: #4caf50;
+}
+
+.hire-me-scrolled button {
+  background-color: #e64051;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hire-me-scrolled button:hover {
+  background-color: #fff;
+  color: #af4c4c;
+}
+
+.nav-scrolled a.nav-selected {
+  color: #fd4766;
+}
+
+.nav-scrolled a.nav-selected::after {
+  background-color: #fd4766;
+}
+
+.nav-scrolled .nav-selected,
+.nav-scrolled .nav-selected:hover {
+  color: #fd4766 !important;
+}
+
+.nav-scrolled .nav-selected::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fd4766;
+}
+
+/* Existing styles above */
+/* ... (existing styles) */
+
+@media only screen and (max-width: 767px) {
+  .header {
+    padding-right: 0px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .nav-mobile-icon {
+    display: flex;
+  }
+
+  .nav-mobile-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .nav-mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 90px;
+    right: 0;
+    background-color: #091020;
+    z-index: 999;
+    border-bottom: 2px solid #fd4766;
+    margin-top: 15px; /* Adjust the margin-top to move the mobile navigation closer to the header */
+  }
+
+  .nav-mobile-open li {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .nav-mobile-open a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-mobile-open a:hover {
+    color: #af4c4c;
+  }
+
+  .header-scrolled .nav-mobile-open {
+    background-color: #091020;
+  }
+
+  .logo img {
+    width: 40px; /* Adjust the width of the logo for a smaller size */
+  }
+
+  .hire-me {
+
+    margin-left: 100px; /* Move the "Hire Me" button to the right */
+  }
+
+  .hire-me button {
+    font-size: 0.9em; /* Adjust the font size of the "Hire Me" button */
+  }
+}

@@ -1,0 +1,323 @@
+/* Portfolio.css */
+
+
+.portfolio-row {
+  
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px -14px;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  
+}
+.gradient-text {
+  background: linear-gradient(90deg, #0793f1, #4b2c50, #f70250);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.portfolio-container {
+  margin: 100px auto;
+  text-align: center;
+  max-width: 1200px;
+}
+
+/* .col-lg-4,
+.col-md-6,
+.col-sm-6,
+.col-12 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: calc(25% + 60px);
+  position: relative;
+} */
+
+
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(236, 0, 0, 0.1);
+}
+
+.Portimage {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(242, 2, 38, 0.9), rgba(242, 2, 38, 0.2));
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.2);
+}
+
+.thumbnail:hover .overlay {
+  opacity: 1;
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  top: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.category_list a {
+  background-color: transparent;
+  color: #f5f7f9;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: 2px solid #f6f9fb;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.category_list a:hover {
+  background-color: #0587b7;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff; /* Set text color to white or any contrasting color */
+  background: linear-gradient(90deg, #0793f1, #4b2c50, #f70250);
+  -webkit-background-clip: text; /* Clip text to the background gradient */
+  -webkit-text-fill-color: transparent; /* Hide the actual text color */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block; /* Ensures the gradient is applied to each line of text */
+}
+
+
+.portfolio_hover {
+  font-size: 1rem;
+  color: #fff;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.thumbnail:hover .portfolio_hover {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* Add this to your Portfolio.css file or create a new CSS file for modal styles */
+
+.portfolio-wrapper {
+  position: relative;
+}
+
+.modal-tittle{
+  text-align: center;
+  color: #080808;
+  font-style: italic;
+  font-family: math;
+  border-bottom: 2px solid #080808;
+}
+.modal-line {
+  width: 2px;
+  height: 100%;
+  background-color: #b60000;
+  margin: 10px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  overflow: hidden;
+  outline: 0;
+  color: #000;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.modal-content {
+  display: flex;
+}
+
+.modal-left,
+.modal-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.modal-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 
+.modal-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+} */
+
+
+
+.modal-right {
+  color: #0a0909;
+  max-width: 100%;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #a80101;
+  cursor: pointer;
+}
+.modal-content-row {
+  margin-top: 20px; /* Add some margin between the title and content */
+}
+
+.vertical-line {
+  height: 100%;
+  width: 2px;
+  background-color: #080808; /* Adjust the color of the vertical line */
+  margin: 0 20px; /* Adjust the margin as needed */
+}
+
+/* Add a line below the project information */
+.modal-info {
+  text-align: center;
+  border-left: 3px solid #080808;
+  padding-bottom: 260px; /* Add some space between text and the line */
+}
+.modal-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.modal-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modal-navigation button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-navigation button:hover {
+  background-color: #2980b9;
+}
+
+.modal-info {
+  padding: 90px;
+}
+
+.modal-header {
+  background: linear-gradient(90deg, #0793f1, #4b2c50, #f70250);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .modal-dialog {
+    width: 100%; /* Full width for smaller screens */
+    max-width: none;
+  }
+
+  .modal-right {
+    max-width: 100%;
+  }
+
+  .modal-info {
+    padding: 30px; /* Reduce padding for smaller screens */
+  }
+
+  .modal-content-row {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+
+  .modal-header {
+    padding: 1rem 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .modal-image {
+    max-width: 100%; /* Full width for images on smaller screens */
+  }
+
+  .close {
+    font-size: 30px !important; /* Adjust font size for close button on smaller screens */
+    top: 5px; /* Adjust position for close button on smaller screens */
+    right: 5px; /* Adjust position for close button on smaller screens */
+  }
+
+  .modal-navigation button {
+    padding: 8px 12px; /* Adjust padding for navigation buttons on smaller screens */
+  }
+  /* Your existing styles below */
+.vertical-line {
+  display: none; /* Hide the vertical line in mobile view */
+}
+}
+
+/* Increase size of close button in desktop view */
+.close {
+  font-size: 30px !important;
+  top: 10px;
+  right: 10px;
+}
+
+
+

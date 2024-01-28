@@ -1,0 +1,15 @@
+/* App.css */
+
+/* Body Styles */
+body {
+  background-color: #0e1525; /* Set the desired background color */
+ color: #fff; /* Set the default text color */
+}
+
+/* Container Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

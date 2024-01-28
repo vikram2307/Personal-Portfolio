@@ -1,0 +1,111 @@
+/* Service.css */
+
+.gradient-text {
+  background: linear-gradient(90deg, #0793f1, #4b2c50, #f70250);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rowser {
+  margin-left: 55px;
+  margin-right: 22px;
+}
+
+.bracket-text {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.service-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.service-item {
+  background-color: #040828;
+  padding: 20px;
+  border-radius: 10px;
+  width: 395px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-item:hover {
+  background-color: #fd4766;
+  transform: translateY(-5px);
+}
+
+.service-item svg {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Separate colors for each logo */
+.service-item:nth-child(1) svg {
+  fill: #3498db;
+}
+
+.service-item:nth-child(2) svg {
+  fill: #e74c3c;
+}
+
+.service-item:nth-child(3) svg {
+  fill: #2ecc71;
+}
+
+.service-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ecf0f1;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #bdc3c7;
+}
+
+/* Add margin between service boxes */
+.service-item + .service-item {
+  margin-left: 20px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Query for Mobile Screens */
+@media only screen and (max-width: 768px) {
+  .rowser {
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .service-box {
+    flex-direction: column; /* Stack service items in a column on smaller screens */
+    align-items: center;
+  }
+
+  .service-item {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px; /* Add margin at the bottom of each service item */
+  }
+}

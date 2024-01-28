@@ -1,0 +1,198 @@
+/* About.css */
+
+/* Add these styles to your CSS */
+@keyframes rainbow {
+    0% { color: #ff0000; } /* Red */
+    20% { color: #ff8000; } /* Orange */
+    40% { color: #ffff00; } /* Yellow */
+    60% { color: #00ff00; } /* Green */
+    80% { color: #0000ff; } /* Blue */
+    100% { color: #ff00ff; } /* Purple */
+  }
+  
+  .rainbow-text {
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 18px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    animation: rainbow 3s infinite;
+    
+  font-family: 'Lato', sans-serif;    
+}
+ .details{
+  text-align: center;
+ }
+.about-wrapper .thumbnail {
+    position: relative;
+    z-index: 2;
+}
+.row--43 {
+  
+  margin-right: 15px;
+  margin-left: 5px;
+  padding: 120px 0;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.about-container {
+    z-index: 1;
+  }
+.about-container.animate {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .img-fluid {
+    position:static;
+    max-width: 80%;
+    border-radius: 10px;
+    height: auto;
+}
+.tab-content{
+  padding-top: 15px ;
+}
+.mt--40 {
+  margin-top: 40px!important;
+}
+  .col-md-4 {
+    position: relative;
+  margin-top: 100px;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  transform: translateX(0); /* Change to 0 to ensure visibility during animation */
+  animation: slideInLeft 3s ease-in-out;
+  
+  }
+  
+  .col-md-8 {
+     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 33.333333%; /* Set left to the width of the image column */
+    margin-top: 100px;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    transform: translateX(0); /* Change to 0 to ensure visibility during animation */
+    animation: slideInRight 3s ease-in-out;
+    margin-right: 130px;
+  }
+  
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  
+  .about-text {
+    position:static;
+    max-width: 600px;
+  }
+  
+  .active-dark ul.tab-style--1 {
+    border-color: #2d3548;
+}
+  .tab-style--1 {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #e6e6e6;
+    border-radius: 50em;
+    cursor: pointer;
+    padding: 0.83333em 34px;
+    margin: -1px -2px;
+    border-radius: 50em;
+    font-weight: 600;
+    transition: all .45s cubic-bezier(0,0,.2,1);
+
+  }
+  ul.tab-style--1 li.react-tabs__tab--selected {
+    background-color: #fd4766;
+    color: #fff;
+    pointer-events: none;
+}
+  .react-tabs__tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .react-tabs__tab:hover {
+    background-color: #fd4766;
+  }
+  
+  ul.tab-style--1 li {
+    list-style-type: none;
+    /* cursor: pointer; */
+    padding: 0.83333em 34px;
+    margin: -1px -2px;
+    border-radius: 50em;
+    font-size: .88889em;
+    font-weight: 600;
+    transition: all .45s cubic-bezier(0,0,.2,1);
+}
+
+
+
+@keyframes fillWidth {
+  to {
+    width: 100%; /* Change this value to represent the percentage you want */
+  }
+}
+ 
+
+.skill-item {
+  margin-bottom: 20px;
+}
+.paragraph {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+
+}
+
+
+.progress-bar {
+  margin-top: 1px;
+  background-color: #eee;
+  height: 3px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #0091ff, #dd00ff, #ff0008); /* Adjust colors as needed */
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .col-lg-7{
+    margin-top: 20px;
+  }
+  .tab-style--1 {
+    display: inline-block;
+    border-radius: 0; /* Eliminate the border radius for tab content on smaller screens */
+    padding-left: 10px;
+  }
+}

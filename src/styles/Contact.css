@@ -1,0 +1,264 @@
+/* Add your global styles here */
+
+.fix {
+  overflow: hidden;
+}
+
+.pb--120 {
+  /* padding-bottom: 120px; */
+}
+
+.bg_color--8 {
+  background: #0e1525;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row--35 {
+  
+  margin-bottom: 100px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+.container {
+  max-width: 1260px;
+}
+
+.mb--50 {
+  margin-bottom: 50px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row--35>[class*=col-], .row--35>[class*=col] {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.thumbnail1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.Contactimg {
+  
+    width: 100%;
+    height: 650px;
+    border-radius: 5px;
+}
+
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.order-lg-2 {
+  order: 2;
+}
+
+/* Styling for the 'subcon' class with linear gradient */
+.subcon {
+  margin-bottom: 10px;
+  color: #fff;
+  background: linear-gradient(90deg, #0793f1, #4b2c50, #f70250);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+.subtitle {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 62px;
+  margin-bottom: 20px;
+}
+/* Your existing styles here */
+
+/* Add these styles for im-hover class */
+.im-hover {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, background-position 0.3s ease;
+}
+
+.im-hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px; /* Adjust the underline thickness as needed */
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #0793f1, #4b2c50, #f70250);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.im-hover:hover {
+  color: #fd4766 !important;
+}
+
+.im-hover:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.im_address_inner .active-dark .im_address .link {
+  color: rgba(198, 201, 216, .75);
+}
+
+.im_address_inner .im_address .link {
+  color: #1f1f25;
+  color: var(--color-heading);
+  font-weight: 500;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 10px;
+  transition: .3s;
+}
+.im_address_inner{
+color: #757575;
+}
+/* Adjust text color for input fields */
+.rn-form-group input {
+  color: #b1bcd7; /* Set your desired dark text color */
+  width: 100%;
+  background-color: #0e1525;
+  border: 1px solid #757575;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Apply the same style for textarea */
+.rn-form-group textarea {
+  color: #b1bcd7; /* Set your desired dark text color */
+  width: 100%;
+  background-color: #0e1525;
+  border: 1px solid #757575;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-height: 150px;
+}
+
+/* Button styles remain the same */
+/* Updated styles for the button with a pill shape */
+.rn-form-group button {
+  background-color: #FD4766;
+  color: white;
+  padding: 10px 20px; /* Adjust padding for a pill shape */
+  border: none;
+  border-radius: 30px; /* Make it pill-shaped */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+}
+
+.rn-form-group button:hover {
+  background-color: transparent;
+  color: #FD4766;
+  
+  border: 2px solid white; /* Add a white border on hover */
+}
+/* Add this CSS to your styles/Contact.css file or create a new CSS file */
+
+.success-message {
+  position: fixed;
+  top: 18%;
+  right: 0;
+  transform: translate(0%, -50%);
+  background-color: #2cf233; /* Green color */
+  color: #060505; 
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: slideInOut 5s ease-in-out; /* Animation for sliding in and out */
+}
+
+@keyframes slideInOut {
+  0%, 25% {
+    opacity: 0;
+    transform: translateX(100%); /* Move off-screen to the right */
+  }
+  30%, 70% {
+    opacity: 1;
+    transform: translateX(0); /* Move to the center */
+  }
+  75%, 100% {
+    opacity: 0;
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
+}
+
+
+/* Your existing styles here */
+
+@media only screen and (max-width: 768px) {
+  .row--35 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .subcon {
+    padding-top: 15px;
+  }
+  .thumbnail1 {
+    border-radius: 0; /* Remove border radius on thumbnails for smaller screens */
+    box-shadow: none; /* Remove box-shadow on thumbnails for smaller screens */
+  }
+
+  .Contactimg {
+    padding-top: 0px;
+    height: auto; /* Make image responsive for smaller screens */
+  }
+
+  .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    line-height: 42px; /* Adjust line height for smaller screens */
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
+
+  /* Add styles for im-hover on smaller screens */
+  .im-hover::before {
+    height: 2px; /* Adjust the underline thickness for smaller screens */
+  }
+
+  /* Adjust padding for form input fields on smaller screens */
+  .rn-form-group input,
+  .rn-form-group textarea {
+    padding: 8px;
+  }
+
+  /* Adjust padding for form button on smaller screens */
+  .rn-form-group button {
+    padding: 8px 16px;
+    border-radius: 15px; /* Adjust border-radius for smaller screens */
+  }
+
+  /* Move the image above the form in mobile mode */
+  .col-lg-6.order-1.order-lg-2 {
+    order: -1; /* Change order to -1 to move the image above the form */
+  }
+  .im_address_inner .im_address .link {
+    color: #1f1f25;
+    color: var(--color-heading);
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    margin-left: 10px;
+    transition: .3s;
+  }
+  /* Add any additional styles for mobile layout here */
+}
