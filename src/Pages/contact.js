@@ -86,11 +86,12 @@ const ContactForm = () => {
                           +91-9172277511
                         </a>
                       </div>
-                      <div className="im_address mt--5">
-                        <span>Contact Email:</span>
+                      <div className="im_address ">
+                        <span>Contact Email: </span>
                         <a className="link im-hover" href="mailto:Vikramthakur2323@gmail.com">
                           vikramthakur2323@gmail.com
                         </a>
+                        
                       </div>
                     </div>
                   </div>

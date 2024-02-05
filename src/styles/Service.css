@@ -89,6 +89,32 @@
     transform: translateY(0);
   }
 }
+/* Service.css */
+
+/* ... (previous styles) */
+
+.service-item svg {
+  max-width: 50px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Add transition property for smooth animation */
+}
+
+.service-item:hover svg {
+  animation: rotateIcon 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ... (other styles) */
+
 
 /* Media Query for Mobile Screens */
 @media only screen and (max-width: 768px) {
@@ -108,7 +134,8 @@
     margin-left: 0;
     margin-bottom: 20px; /* Add margin at the bottom of each service item */
   }
+
   .service-item + .service-item {
     margin-left: 0px; 
-}
+  }
 }

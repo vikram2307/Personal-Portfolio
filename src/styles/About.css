@@ -1,176 +1,223 @@
 /* About.css */
 
-/* Add these styles to your CSS */
 @keyframes rainbow {
-    0% { color: #ff0000; } /* Red */
-    20% { color: #ff8000; } /* Orange */
-    40% { color: #ffff00; } /* Yellow */
-    60% { color: #00ff00; } /* Green */
-    80% { color: #0000ff; } /* Blue */
-    100% { color: #ff00ff; } /* Purple */
-  }
-  
-  .rainbow-text {
-    font-weight: 600;
-    letter-spacing: .5px;
-    line-height: 18px;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-bottom: 12px;
-    animation: rainbow 3s infinite;
-    
-  font-family: 'Lato', sans-serif;    
+  0% { color: #ff0000; } /* Red */
+  20% { color: #ff8000; } /* Orange */
+  40% { color: #ffff00; } /* Yellow */
+  60% { color: #00ff00; } /* Green */
+  80% { color: #0000ff; } /* Blue */
+  100% { color: #ff00ff; } /* Purple */
 }
- .details{
+
+.rainbow-text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  animation: rainbow 3s infinite;
+  font-family: 'Lato', sans-serif;
+}
+
+.details {
   text-align: center;
- }
-.about-wrapper .thumbnail {
-    position: relative;
-    z-index: 2;
 }
+
+.about-wrapper .thumbnail {
+  position: relative;
+  z-index: 2;
+}
+
 .row--43 {
-  
   margin-right: 15px;
   margin-left: 5px;
   padding: 120px 0;
   display: flex;
   flex-wrap: wrap;
-  
 }
-.about-container {
-    z-index: 1;
-  }
-.about-container.animate {
-    animation: fadeIn 1s ease-in-out;
-  }
 
-  .img-fluid {
-    position:static;
-    max-width: 80%;
-    border-radius: 10px;
-    height: auto;
+.about-container {
+  z-index: 1;
 }
-.tab-content{
-  padding-top: 15px ;
+
+.about-container.animate {
+  animation: fadeIn 1s ease-in-out;
 }
+
+.img-fluid {
+  position: static;
+  max-width: 80%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.tab-content {
+  padding-top: 15px;
+}
+
 .mt--40 {
-  margin-top: 40px!important;
+  margin-top: 40px !important;
 }
-  .col-md-4 {
-    position: relative;
+
+.col-md-4 {
+  position: relative;
   margin-top: 100px;
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
-  transform: translateX(0); /* Change to 0 to ensure visibility during animation */
+  transform: translateX(0);
   animation: slideInLeft 3s ease-in-out;
-  
-  }
-  
-  .col-md-8 {
-     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 33.333333%; /* Set left to the width of the image column */
-    margin-top: 100px;
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
-    transform: translateX(0); /* Change to 0 to ensure visibility during animation */
-    animation: slideInRight 3s ease-in-out;
-    margin-right: 130px;
-  }
-  
-  
-  @keyframes slideInLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInRight {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  
-  .about-text {
-    position:static;
-    max-width: 600px;
-  }
-  
-  .active-dark ul.tab-style--1 {
-    border-color: #2d3548;
-}
-  .tab-style--1 {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #e6e6e6;
-    border-radius: 50em;
-    cursor: pointer;
-    padding: 0.83333em 34px;
-    margin: -1px -2px;
-    border-radius: 50em;
-    font-weight: 600;
-    transition: all .45s cubic-bezier(0,0,.2,1);
-
-  }
-  ul.tab-style--1 li.react-tabs__tab--selected {
-    background-color: #fd4766;
-    color: #fff;
-    pointer-events: none;
-}
-  .react-tabs__tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .react-tabs__tab:hover {
-    background-color: #fd4766;
-  }
-  
-  ul.tab-style--1 li {
-    list-style-type: none;
-    /* cursor: pointer; */
-    padding: 0.83333em 34px;
-    margin: -1px -2px;
-    border-radius: 50em;
-    font-size: .88889em;
-    font-weight: 600;
-    transition: all .45s cubic-bezier(0,0,.2,1);
 }
 
+.col-md-8 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 33.333333%;
+  margin-top: 100px;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  transform: translateX(0);
+  animation: slideInRight 3s ease-in-out;
+  margin-right: 130px;
+}
 
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.about-text {
+  position: static;
+  max-width: 600px;
+}
+
+.active-dark ul.tab-style--1 {
+  border-color: #2d3548;
+}
+
+.tab-style--1 {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #e6e6e6;
+  border-radius: 50em;
+  cursor: pointer;
+  padding: 0.83333em 34px;
+  margin: -1px -2px;
+  border-radius: 50em;
+  font-weight: 600;
+  transition: all 0.45s cubic-bezier(0, 0, 0.2, 1);
+}
+
+ul.tab-style--1 li.react-tabs__tab--selected {
+  background-color: #fd4766;
+  color: #fff;
+  pointer-events: none;
+}
+
+.react-tabs__tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.react-tabs__tab:hover {
+  background-color: #fd4766;
+}
+
+ul.tab-style--1 li {
+  list-style-type: none;
+  padding: 0.83333em 34px;
+  margin: -1px -2px;
+  border-radius: 50em;
+  font-size: 0.88889em;
+  font-weight: 600;
+  transition: all 0.45s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.certification-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.certification-content {
+  display: flex;
+  align-items: center;
+}
+
+.share-logo {
+  max-width: 20px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-link {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background: linear-gradient(90deg, #0793f1, #4b2c50, #f70250);
+  color: #fff;
+}
+
+.page-link:disabled {
+  background-color: #ddd;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.space-between-pages {
+  margin: 0 10px;
+}
 
 @keyframes fillWidth {
   to {
-    width: 100%; /* Change this value to represent the percentage you want */
+    width: 100%;
   }
 }
- 
 
 .skill-item {
   margin-bottom: 20px;
 }
+
 .paragraph {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
-
 }
-
 
 .progress-bar {
   margin-top: 1px;
@@ -182,29 +229,39 @@
 
 .progress {
   height: 100%;
-  background: linear-gradient(to right, #0091ff, #dd00ff, #ff0008); /* Adjust colors as needed */
+  background: linear-gradient(to right, #0091ff, #dd00ff, #ff0008);
   color: #fff;
 }
 
 @media (max-width: 767px) {
-  .col-lg-7{
-    margin-top: 20px;
-    margin-left: 30px;
-    
+  .col-lg-7 {
+    padding-top: 40px;
   }
+
   .img-fluid {
-    position:static;
+    position: static;
     max-width: 100%;
     border-radius: 10px;
     height: auto;
-}
-  .col-lg-5{
-    margin-top: -20px;
-    padding-left: 40px;
   }
+
+  .col-lg-5 {
+    margin-top: -20px;
+  }
+
   .tab-style--1 {
-    display: inline-block;
-    border-radius: 0; /* Eliminate the border radius for tab content on smaller screens */
-    padding-left: 10px;
+    border: none;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  ul.tab-style--1 li {
+    padding: 20px 20px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .react-tabs__tab {
+    padding: 10px 15px;
   }
 }

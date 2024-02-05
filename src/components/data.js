@@ -50,18 +50,18 @@ const certificationsData = [
 ];
 
 const experiencesData = [
-  { title: 'Jr. Software Engineer Intern - Cravita Technology PVT LTD.', date: 'February 2023 - Jun 2023' },
+  { title: 'Jr. Software Engineer Intern - Cravita Technology PVT LTD.', date: 'February 2023 - Jully 2023' },
   // Add more experiences as needed
 ];
 
 const educationData = [
-  { title: 'Msc In CSE- Modern College of Arts, Science and Commercek, Pune, Maharashtra.  -2023' },
+  { title: 'MSC In CSE- Modern College of ARTS, COMMERCE & SCIENCE, Pune, Maharashtra.  -2023' },
 
-  { title: 'Bsc In CSE - DR. D.Y. PATIL ARTS, COMMERCE & SCIENCE COLLEGE, Pune, Maharashtra.  -2021' },
+  { title: 'BSC In CSE- DR. D.Y. Patil ARTS, COMMERCE & SCIENCE , Pune, Maharashtra.  -2021' },
   
-  { title: 'Hsc - Bharat Bharti Secondary High School, Parbhani, Maharashtra.  -2018' },
+  { title: 'HSC - Bharat Bharti Secondary High School, Parbhani, Maharashtra.  -2018' },
   
-  { title: 'Ssc - Nutan Vidyalaya Selu, Parbhani, Maharashtra.  -2016' },
+  { title: 'SSC - Nutan Vidyalaya Selu, Parbhani, Maharashtra.  -2016' },
   // Add more education details as needed
 ];
 

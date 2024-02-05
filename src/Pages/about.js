@@ -43,8 +43,8 @@ const About = () => {
               </div>
             ))}
             <div className="page-navigation">
-              <button onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
-              <button onClick={handleNextPage} disabled={endIdx >= skillsData.length}>{'>'}</button>
+              <button className="page-link space-between-pages" onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
+              <button  className="page-link space-between-pages" onClick={handleNextPage} disabled={endIdx >= skillsData.length}>{'>'}</button>
             </div>
           </div>
 
@@ -52,28 +52,29 @@ const About = () => {
       case 'Certifications':
         return (
           <div className="tab-content">
-            {/* Content for the "Certifications" section */}
-            {/* Render certifications based on the currentPage */}
-            {certificationsData.slice(startIdx, endIdx).map((certification, index) => (
-              <div key={index}>
-                <h5>{certification.title}</h5>
-                <a href={certification.link} target="_blank" rel="noopener noreferrer">
-                {certification.link}
-              </a>
-              <p></p>
-              </div>
+       {certificationsData.slice(startIdx, endIdx).map((certification, index) => (
+  <div key={index} className="certification-container">
+    <div className="certification-content">
+      <h5>{certification.title}</h5>
+      <a href={certification.link} target="_blank" rel="noopener noreferrer">
+        <img className="share-logo" src="/images/share2.png" alt="Certification Logo" />
+      </a>
+      <p></p>
+    </div>
+  </div>
+
+
+
             ))}
             <div className="page-navigation">
-              <button onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
-              <button onClick={handleNextPage} disabled={endIdx >= certificationsData.length}>{'>'}</button>
+              <button className="page-link space-between-pages" onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
+              <button  className="page-link space-between-pages"onClick={handleNextPage} disabled={endIdx >= certificationsData.length}>{'>'}</button>
             </div>
           </div>
         );
       case 'Experience':
         return (
           <div className="tab-content">
-            {/* Content for the "Experience" section */}
-            {/* Render experiences based on the currentPage */}
             {experiencesData.slice(startIdx, endIdx).map((experience, index) => (
               <div key={index}>
                 <h5>{experience.title}</h5>
@@ -81,16 +82,14 @@ const About = () => {
               </div>
             ))}
             <div className="page-navigation">
-              <button onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
-              <button onClick={handleNextPage} disabled={endIdx >= experiencesData.length}>{'>'}</button>
+              <button className="page-link space-between-pages" onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
+              <button className="page-link space-between-pages" onClick={handleNextPage} disabled={endIdx >= experiencesData.length}>{'>'}</button>
             </div>
           </div>
         );
       case 'Education':
         return (
           <div className="tab-content">
-            {/* Content for the "Education" section */}
-            {/* Render education details based on the currentPage */}
             {educationData.slice(startIdx, endIdx).map((education, index) => (
               <div key={index}>
                 <h5>{education.title}</h5>
@@ -99,9 +98,9 @@ const About = () => {
               </div>
             ))}
             <div className="page-navigation">
-              <button onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
-              <button onClick={handleNextPage} disabled={endIdx >= educationData.length}>{'>'}</button>
-            </div>
+             <button className="page-link space-between-pages" onClick={handlePrevPage} disabled={currentPage === 1}>{'<'}</button>
+              <button className="page-link space-between-pages" onClick={handleNextPage} disabled={endIdx >= educationData.length}>{'>'}</button>
+             </div>
           </div>
         );
       default:

@@ -11,6 +11,7 @@
   color: #f8fafc;
   margin-top: -25px;
   margin-bottom: 20px;
+  animation: fadeInLeft 5s ; 
 }
 
 .home-container img {
@@ -41,7 +42,16 @@
 .fontcolour:hover span {
   transform: translateY(-100%);
 }
-
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @keyframes slideUp {
   0% {
     transform: translateY(100%);
@@ -75,8 +85,17 @@
   font-size: 1.2em;
   border: 2px solid #f6f9fb;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transform transition */
   border-radius: 20px;
+  animation: rotate 3s infinite; /* Use rotate animation */
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .download-btn:hover {
